@@ -13,7 +13,7 @@ export const ThingsList = () => {
     const getData = async () => {
         try {
             // const response = await fetch("http://localhost:3000/pokemons");
-            const response = await fetch("public/db.json");
+            const response = await fetch("db.json");
             if (!response.ok) throw new Error(`Error! Status: ${response.status}`);
             const result = await response.json();
             setThings(result.pokemons);
@@ -41,7 +41,7 @@ export const ThingsList = () => {
 
         try {
             // const resposne = await fetch("http://localhost:3000/pokemon", {
-            const resposne = await fetch("public/db.json", {
+            const resposne = await fetch("db.json", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newThing),
