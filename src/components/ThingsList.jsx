@@ -40,7 +40,8 @@ export const ThingsList = () => {
         };
 
         try {
-            const resposne = await fetch("http://localhost:3000/pokemon", {
+            // const resposne = await fetch("http://localhost:3000/pokemon", {
+            const resposne = await fetch("public/db.json", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newThing),
@@ -49,8 +50,8 @@ export const ThingsList = () => {
                 getData();
                 setTitle("");
                 setHp("");
-                setFrontImg("");
-                setBackImg("");
+                // setFrontImg("");
+                // setBackImg("");
             }
         } catch (error) {
             setError("Error");
