@@ -17,7 +17,7 @@ export const ThingsList = () => {
             
             if (!response.ok) throw new Error(`Error! Status: ${response.status}`);
             const result = await response.json();
-            setThings(result);
+            setThings(result.pokemons);
         } catch (error) {
             setError(error.message);
         }
