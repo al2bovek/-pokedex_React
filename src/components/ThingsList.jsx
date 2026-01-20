@@ -59,7 +59,7 @@ export const ThingsList = () => {
     };
 
     const filteredThings = things.filter((thing) =>
-        thing.name.toLowerCase().includes(search.toLowerCase())
+        thing.name.toLowerCase().startsWith(search.toLowerCase())
     );
 
     return (
@@ -84,7 +84,7 @@ export const ThingsList = () => {
                 <label >
                     hp:
                     <input
-                        type="number"
+                        type="text"
                         placeholder="hp"
                         value={hp}
                         onChange={(e) => setHp(e.target.value)}
