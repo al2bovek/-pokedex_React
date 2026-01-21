@@ -68,7 +68,7 @@ export const ThingsList = () => {
                 {error}
             </div>
             <h1 className="text-3xl">Pokemon Searcher</h1>
-            <form
+            {/* <form
                 className="py-6 flex justify-between [&>label]:mx-2 [&>label>input]:px-2 [&>label>input]:border [&>label>input]:p-1"
             >
                 <label >
@@ -110,13 +110,13 @@ export const ThingsList = () => {
                         onChange={(e) => setBackImg(e.target.value)}
                     />
                 </label>
-            </form>
+            </form> */}
 
-            <div className="py-2 border-amber-800">
+            {/* <div className="py-2 border-amber-800">
                 <button onClick={handleSubmit} className="border-amber-600">
                     Submit
                 </button>
-            </div>
+            </div> */}
 
 
             <div className="py-6 ">
