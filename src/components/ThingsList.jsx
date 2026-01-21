@@ -40,7 +40,6 @@ export const ThingsList = () => {
         };
 
         try {
-            // const resposne = await fetch("http://localhost:3000/pokemon", {
             const resposne = await fetch("db.json", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -50,8 +49,8 @@ export const ThingsList = () => {
                 getData();
                 setTitle("");
                 setHp("");
-                // setFrontImg("");
-                // setBackImg("");
+                setFrontImg("");
+                setBackImg("");
             }
         } catch (error) {
             setError("Error");
@@ -119,9 +118,9 @@ export const ThingsList = () => {
             </div> */}
 
 
-            <div className="py-6 ">
+            <div className="py-6">
                 <input
-                    className="border rounded-4xl py-2 mx-3"
+                    className="border rounded-4xl py-2 px-9"
                     type="text"
                     placeholder="Search... ❤️"
                     value={search}
@@ -130,15 +129,15 @@ export const ThingsList = () => {
             </div>
 
             <div
-                className="flex  flex-wrap gap-6 justify-around "
+                className="flex flex-col md:flex-row flex-wrap gap-6 justify-around items-center"
             >
                 {filteredThings.map((pokemon) => (
                     <div
                         key={pokemon.id}
-                        className="flex flex-col w-[15%] border"
+                        className="flex flex-col lg:w-[15%] md:w-[25%] sm:w-[55%] xs:w-[65%] border"
                     >
                         <img
-                            className="w-[90%]"
+                            className="w-[90%] object-fill"
                             src={pokemon.img}
                             alt={pokemon.name}
                         />
